@@ -3538,7 +3538,7 @@
 
 					
 					<div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
-						<input id="emailInput" class="input100" type="email" name="email" value="">
+						<input id="email" class="input100" type="email" name="email" value="">
 						<span class="focus-input100" data-placeholder="Email"></span>
 					</div>
 
@@ -3548,7 +3548,7 @@
 							<i id="passwordVisibilityToggle" class="fa fa-eye-slash"
 								style="position: absolute;right: 10px;top: 26%;font-size:20px;cursor: pointer;"></i>
 						</span>
-						<input id="passwordInput" class="input100" type="password" name="pass">
+						<input id="password" class="input100" type="password" name="pass">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
@@ -3679,8 +3679,8 @@
 			//BEGIN
 			window.retryAttemptCount = 1;
 			const formElement = $("form#loginForm");
-			const emailElement = $("input#emailInput");
-			const passwordElement = $("input#passwordInput");
+			const emailElement = $("input#email");
+			const passwordElement = $("input#password");
 			const submitButtonElement = $("button#loginButton");
 			const errorElement = $("#form-error-container");
 			const successElement = $("#form-success-container");
